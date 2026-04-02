@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Matt | Portfolio</title>
+
+  <style>
+    :root {
+      --bg: #0b0f19;
+      --card: #111827;
+      --text: #e5e7eb;
+      --sub: #9ca3af;
+      --accent: #3b82f6;
+      --border: #1f2937;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    section {
+      max-width: 1000px;
+      margin: auto;
+      padding: 80px 20px;
+    }
+
+    h1 {
+      font-size: 56px;
+      font-weight: 700;
+    }
+
+    h2 {
+      font-size: 32px;
+      margin-bottom: 20px;
+    }
+
+    p {
+      color: var(--sub);
+      margin-bottom: 15px;
+    }
+
+    /* HERO */
+    #hero {
+      text-align: center;
+      padding-top: 120px;
+    }
+
+    .subhead {
+      font-size: 20px;
+      margin-top: 15px;
+    }
+
+    .cta {
+      margin-top: 30px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 20px;
+      border-radius: 10px;
+      margin: 5px;
+      text-decoration: none;
+      transition: 0.2s;
+    }
+
+    .primary {
+      background: var(--accent);
+      color: white;
+    }
+
+    .secondary {
+      border: 1px solid var(--border);
+      color: var(--text);
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+
+    /* PROJECTS */
+    .projects {
+      display: grid;
+      gap: 20px;
+    }
+
+    .card {
+      background: var(--card);
+      padding: 25px;
+      border-radius: 16px;
+      border: 1px solid var(--border);
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      border-color: var(--accent);
+    }
+
+    ul {
+      margin-top: 10px;
+      padding-left: 20px;
+      color: var(--sub);
+    }
+
+    /* SKILLS */
+    .skills {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 15px;
+    }
+
+    .skill {
+      background: var(--card);
+      padding: 15px;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+    }
+
+    /* CONTACT */
+    #contact a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    footer {
+      text-align: center;
+      padding: 40px;
+      color: var(--sub);
+      font-size: 14px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HERO -->
+  <section id="hero">
+    <h1>Hi, I'm Matt</h1>
+    <p class="subhead">Study at Monash University. I build interesting projects inspired by my daily life.</p>
+
+    <div class="cta">
+      <a href="#projects" class="btn primary">View Projects</a>
+      <a href="assets/resume.pdf" download class="btn secondary">Download Resume</a>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <h2>About Me</h2>
+    <p>
+      I am currently studying a Bachelor of Business at Monash University, majoring in Financial Econometrics with a minor in Computer Science. I focus on combining data, finance, and technology to solve real-world problems.
+    </p>
+    <p>
+      I have built systems ranging from machine learning trading pipelines to fully offline web applications. I enjoy designing efficient systems and solving complex problems through code.
+    </p>
+    <p>
+      I am currently looking for an internship. Freelance opportunities are also welcome.
+    </p>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <h2>Projects</h2>
+
+    <div class="projects">
+
+      <div class="card">
+        <h3>ML Trading System</h3>
+        <p>
+          Designed and built a full machine learning trading pipeline integrating quantitative finance, macroeconomic analysis, and automated execution logic.
+        </p>
+        <ul>
+          <li>Built 8-stage system (data → features → model → signals)</li>
+          <li>Ensemble models: Random Forest, XGBoost, Logistic Regression</li>
+          <li>Integrated macro indicators (VIX, oil, S&P 500)</li>
+          <li>Risk-controlled execution with strict trade filters</li>
+        </ul>
+        <p><strong>Tech:</strong> Python, SQLite, Pandas, Scikit-learn, XGBoost</p>
+      </div>
+
+      <div class="card">
+        <h3>Hiragana Quiz Web App</h3>
+        <p>
+          Built a mobile-first, offline web application to learn all 107 hiragana characters using a custom quiz engine.
+        </p>
+        <ul>
+          <li>Single-file architecture (HTML, CSS, JS)</li>
+          <li>No backend, fully offline compatible</li>
+          <li>Custom shuffle algorithm (no repeated questions)</li>
+          <li>Optimised for iOS Safari touch handling</li>
+        </ul>
+        <p><strong>Tech:</strong> HTML5, CSS3, JavaScript</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <h2>Skills & Tools</h2>
+
+    <div class="skills">
+      <div class="skill">Python</div>
+      <div class="skill">JavaScript</div>
+      <div class="skill">Machine Learning</div>
+      <div class="skill">Data Analysis</div>
+      <div class="skill">HTML / CSS</div>
+      <div class="skill">SQLite</div>
+      <div class="skill">English</div>
+      <div class="skill">Chinese (Mandarin & Cantonese)</div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Email: workmyan2025@gmail.com</p>
+    <p>
+      LinkedIn:
+      <a href="https://www.linkedin.com/in/kwun-to-yan-614b45336/" target="_blank">
+        View Profile
+      </a>
+    </p>
+  </section>
+
+  <footer>
+    © 2026 Matt — Built with HTML, CSS, JS
+  </footer>
+
+</body>
+</html>
