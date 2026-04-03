@@ -6,152 +6,116 @@
   <title>Matt | Portfolio</title>
 
   <style>
-    :root {
-      --bg: #0b0f19;
-      --card: #111827;
-      --text: #e5e7eb;
-      --sub: #9ca3af;
-      --accent: #3b82f6;
-      --border: #1f2937;
-    }
+  :root {
+    --bg: #ffffff;
+    --text: #111111;
+    --sub: #555;
+    --accent: #e11d48; /* red */
+    --card: #f8f8f8;
+  }
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+  body {
+    font-family: "Inter", -apple-system, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    margin: 0;
+  }
 
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.6;
-    }
+  section {
+    max-width: 1100px;
+    margin: auto;
+    padding: 100px 20px;
+  }
 
-    section {
-      max-width: 1000px;
-      margin: auto;
-      padding: 80px 20px;
-    }
+  h1 {
+    font-size: 64px;
+    font-weight: 700;
+  }
 
-    h1 {
-      font-size: 56px;
-      font-weight: 700;
-    }
+  h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
 
-    h2 {
-      font-size: 32px;
-      margin-bottom: 20px;
-    }
+  p {
+    color: var(--sub);
+  }
 
-    p {
-      color: var(--sub);
-      margin-bottom: 15px;
-    }
+  .btn {
+    padding: 12px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    margin-right: 10px;
+  }
 
-    /* HERO */
-    #hero {
-      text-align: center;
-      padding-top: 120px;
-    }
+  .primary {
+    background: var(--accent);
+    color: white;
+  }
 
-    .subhead {
-      font-size: 20px;
-      margin-top: 15px;
-    }
+  .secondary {
+    border: 1px solid #ddd;
+    color: var(--text);
+  }
 
-    .cta {
-      margin-top: 30px;
-    }
+  .projects {
+    display: grid;
+    gap: 30px;
+  }
 
-    .btn {
-      display: inline-block;
-      padding: 12px 20px;
-      border-radius: 10px;
-      margin: 5px;
-      text-decoration: none;
-      transition: 0.2s;
-    }
+  .card {
+    background: var(--card);
+    padding: 30px;
+    border-radius: 14px;
+    transition: 0.3s;
+  }
 
-    .primary {
-      background: var(--accent);
-      color: white;
-    }
+  .card:hover {
+    transform: translateY(-5px);
+  }
 
-    .secondary {
-      border: 1px solid var(--border);
-      color: var(--text);
-    }
+  .image-box {
+    width: 100%;
+    height: 200px;
+    background: #ddd;
+    border-radius: 10px;
+    margin-bottom: 15px;
+  }
 
-    .btn:hover {
-      transform: translateY(-2px);
-    }
-
-    /* PROJECTS */
-    .projects {
-      display: grid;
-      gap: 20px;
-    }
-
-    .card {
-      background: var(--card);
-      padding: 25px;
-      border-radius: 16px;
-      border: 1px solid var(--border);
-      transition: 0.3s;
-    }
-
-    .card:hover {
-      transform: translateY(-5px);
-      border-color: var(--accent);
-    }
-
-    ul {
-      margin-top: 10px;
-      padding-left: 20px;
-      color: var(--sub);
-    }
-
-    /* SKILLS */
-    .skills {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 15px;
-    }
-
-    .skill {
-      background: var(--card);
-      padding: 15px;
-      border-radius: 10px;
-      border: 1px solid var(--border);
-    }
-
-    /* CONTACT */
-    #contact a {
-      color: var(--accent);
-      text-decoration: none;
-    }
-
-    footer {
-      text-align: center;
-      padding: 40px;
-      color: var(--sub);
-      font-size: 14px;
-    }
-  </style>
+</style>
 </head>
 
 <body>
 
-  <!-- HERO -->
-  <section id="hero">
-    <h1>Hi, I'm Matt</h1>
-    <p class="subhead">Study at Monash University. I build interesting projects inspired by my daily life.</p>
+  <nav style="padding:20px 40px; display:flex; justify-content:space-between;">
+  <h3>Matt</h3>
+  <div>
+    <a href="#projects">Projects</a>
+    <a href="#sports">Sports</a>
+    <a href="#contact">Contact</a>
+  </div>
+  </nav>
 
-    <div class="cta">
+  <!-- HERO -->
+    <section id="hero" style="display:flex; align-items:center; gap:40px;">
+  
+    <div>
+    <h1>Hi, I'm Matt</h1>
+
+    <p class="subhead">
+      Business & Tech student at Monash University. I build systems combining data, finance, and engineering.
+    </p>
+
+    <div style="margin-top:20px;">
       <a href="#projects" class="btn primary">View Projects</a>
-      <a href="assets/resume.pdf" download class="btn secondary">Download Resume</a>
+      <a href="assets/resume.pdf" target="_blank" class="btn secondary">Resume</a>
     </div>
+    </div>
+
+  <div>
+    <div style="width:250px;height:300px;background:#eee;border-radius:20px;"></div>
+  </div>
+
   </section>
 
   <!-- ABOUT -->
@@ -175,6 +139,9 @@
     <div class="projects">
 
       <div class="card">
+        <div class="image-box">
+        <img src="assets/project-images/trading.png" class="image-box">
+        </div>
         <h3>ML Trading System</h3>
         <p>
           Designed and built a full machine learning trading pipeline integrating quantitative finance, macroeconomic analysis, and automated execution logic.
@@ -189,6 +156,9 @@
       </div>
 
       <div class="card">
+        <div class="image-box">
+        <img src="assets/project-images/hiragana.png" class="image-box">
+        </div>
         <h3>Hiragana Quiz Web App</h3>
         <p>
           Built a mobile-first, offline web application to learn all 107 hiragana characters using a custom quiz engine.
@@ -202,8 +172,36 @@
         <p><strong>Tech:</strong> HTML5, CSS3, JavaScript</p>
       </div>
 
+      <div class="card">
+        <div class="image-box"></div>
+        <img src="assets/project-images/pokemon.png" class="image-box">
+        </div>
+         <h3>Pokémon Battle System (PvP Web Game)</h3>
+
+        <p>
+        Built a real-time multiplayer Pokémon battle system using a client-server architecture with WebSocket communication.
+        </p>
+
+      <ul>
+       <li>Designed Node.js server as authoritative game engine</li>
+       <li>Implemented full Gen IX battle mechanics (damage, abilities, status)</li>
+       <li>Real-time sync between 3 clients (TV + 2 mobile controllers)</li>
+       <li>QR-based connection system for seamless multiplayer setup</li>
+       </ul>
+
+      <p><strong>Tech:</strong> Node.js, WebSocket, HTML/CSS/JS</p>
+       </div>
+
     </div>
-  </section>
+    </section>
+
+    <section id="sports">
+    <h2>Sports</h2>
+
+    <p>
+    (Content coming soon — will include my sports activities, achievements, and interests.)
+    </p>
+    </section>
 
   <!-- SKILLS -->
   <section id="skills">
